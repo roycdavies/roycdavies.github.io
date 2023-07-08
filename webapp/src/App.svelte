@@ -3,7 +3,7 @@
 </script>
 
 <main>
-    <Button ui>Hello World</Button>
+    <Button ui blue>Hello World</Button>
 </main>
 
 <style>
