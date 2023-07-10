@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Button, Menu, Container, Link, Item, Segment, Header, Table, Table_Body, Table_Col, Table_Row, Icon, Message, Content } from 'svelte-fomantic-ui';
+    import {Button, Menu, Container, Link, Item, Segment, Header, Table, Table_Body, Table_Col, Table_Row, Icon, Message, Content, Embed } from 'svelte-fomantic-ui';
 
     let page = "why";
 </script>
@@ -9,8 +9,8 @@
         <Container ui>
             <Menu ui large secondary inverted pointing>
                 <Link item active={page==="why"} blue={page==="why"} on:click={()=>page="why"}>Why</Link>
-                <!-- <Link item active={page==="what"} blue={page==="what"} on:click={()=>page="what"}>What</Link>
-                <Link item active={page==="how"} blue={page==="how"} on:click={()=>page="how"}>How</Link> -->
+                <!-- <Link item active={page==="what"} blue={page==="what"} on:click={()=>page="what"}>What</Link> -->
+                <Link item active={page==="how"} blue={page==="how"} on:click={()=>page="how"}>How</Link>
                 <Menu right>
                     <Link item active={page==="who"} green={page==="who"} on:click={()=>page="who"}>Who</Link>
                 </Menu>
@@ -37,11 +37,11 @@
             </Container>
             <Container ui>
 
-            </Container>
-        {:else if page==="how"}
-            <Container ui style="padding-top:50px;height:200px;">
-                <Header ui h2 inverted>How</Header>
             </Container> -->
+        {:else if page==="how"}
+            <Container ui style="padding-top:50px;height:200px;" left aligned>
+                <div style="position:relative;width:100%;height:0;padding-bottom:calc(56.25% + 40px);"><iframe allowfullscreen style="position:absolute; width: 100%; height: 100%;border: solid 1px #333;" src="https://www.beautiful.ai/embed/-N_0NfqlHyRmYIUWL_-O?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Mv_W94JHHhsVB3uEVZc"></iframe><a href="https://www.beautiful.ai/embed/-N_0NfqlHyRmYIUWL_-O?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Mv_W94JHHhsVB3uEVZc">View The story of hine on Beautiful.ai</a></div>
+            </Container>
         {:else if page==="who"}
             <Container ui style="padding-top:50px;min-height:200px;padding-bottom:50px;">
                 <Header ui h2 inverted>You will find me in various places</Header>
