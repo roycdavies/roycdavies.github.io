@@ -12,7 +12,7 @@
                 <!-- <Link item active={page==="what"} blue={page==="what"} on:click={()=>page="what"}>What</Link> -->
                 <Link item active={page==="how"} blue={page==="how"} on:click={()=>page="how"}>How</Link>
                 <Menu right>
-                    <Link item active={page==="who"} green={page==="who"} on:click={()=>page="who"}>Who</Link>
+                    <Link item active={page==="contact"} green={page==="contact"} on:click={()=>page="contact"}>Contact</Link>
                 </Menu>
             </Menu>
         </Container>
@@ -38,11 +38,13 @@
             <Container ui>
 
             </Container> -->
+
+
         {:else if page==="how"}
             <Container ui style="padding-top:50px;height:200px;" left aligned>
                 <div style="position:relative;width:100%;height:0;padding-bottom:calc(56.25% + 40px);"><iframe allowfullscreen style="position:absolute; width: 100%; height: 100%;border: solid 1px #333;" src="https://www.beautiful.ai/embed/-N_0NfqlHyRmYIUWL_-O?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Mv_W94JHHhsVB3uEVZc"></iframe><a href="https://www.beautiful.ai/embed/-N_0NfqlHyRmYIUWL_-O?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Mv_W94JHHhsVB3uEVZc">View The story of hine on Beautiful.ai</a></div>
             </Container>
-        {:else if page==="who"}
+        {:else if page==="contact"}
             <Container ui style="padding-top:50px;min-height:200px;padding-bottom:50px;">
                 <Header ui h2 inverted>You will find me in various places</Header>
                 <Table ui inverted centered>
@@ -74,6 +76,10 @@
                         <Table_Row>
                             <Table_Col right aligned>Imersia <Icon ui tablet alternate/></Table_Col>
                             <Table_Col><Link href="https://www.imersia.com" target="_blank">https://www.imersia.com</Link></Table_Col>
+                        </Table_Row>
+                        <Table_Row>
+                            <Table_Col right aligned>Bitbucket (Imersia) <Icon ui bitbucket/></Table_Col>
+                            <Table_Col><Link href="https://bitbucket.org/imersiageneral/cloud-mixed-reality-server-erlang-rel/wiki/Home" target="_blank">https://bitbucket.org/imersiageneral/cloud-mixed-reality-server-erlang-rel/wiki/Home</Link></Table_Col>
                         </Table_Row>
                         <Table_Row>
                             <Table_Col right aligned>Github <Icon ui github/></Table_Col>
