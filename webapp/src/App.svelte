@@ -3,7 +3,7 @@
 
     import roy from "./assets/roy.jpeg"
 
-    let page = "why";
+    let page = "start";
 </script>
 
 <main>
