@@ -210,7 +210,7 @@
                                     <Link href="https://roycdavies.github.io" target="_blank">roycdavies.github.io</Link>
                                 </Table_Col>
                                 <Table_Col left aligned>
-                                    This website was create using Vite and Svelte, with Fomantic UI (svelte-fomantic-ui) for the UI components.
+                                    This website was created using Vite and Svelte, with Fomantic UI (svelte-fomantic-ui) for the UI components.
                                 </Table_Col>
                                 <Table_Col right aligned>
                                     <Labels ui tiny blue fluid centered>
