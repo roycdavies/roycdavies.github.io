@@ -162,7 +162,7 @@
                                 </Table_Col>
                             </Table_Row>
                             <Table_Row>
-                                <Table_Col left aligned><Link href="https://github.com/uoa-smart-digital-lab/openxr_ux_unity_base" target="_blank">MR Mux</Link></Table_Col>
+                                <Table_Col left aligned><Link href="https://github.com/uoa-smart-digital-lab/xrmux-server" target="_blank">MR Mux</Link></Table_Col>
                                 <Table_Col>An extremely lightweight multiplexor between connected Mixed and Virtual Reality devices to synchronise Virtual Environments</Table_Col>
                                 <Table_Col right aligned>
                                     <Labels ui tiny blue fluid centered>
