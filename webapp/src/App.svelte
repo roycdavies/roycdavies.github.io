@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Button, Menu, Container, Link, Item, Segment, Header, Table, Table_Body, Table_Col, Table_Row, Icon, Message, Content, Column, Image, List, Label } from 'svelte-fomantic-ui';
+    import {Button, Menu, Container, Link, Item, Segment, Header, Table, Table_Body, Table_Col, Table_Row, Icon, Message, Content, Column, Image, Labels, Label } from 'svelte-fomantic-ui';
 
     import roy from "./assets/roy.jpeg"
     import quadruplediamond from "./assets/quadruplediamond.png"
@@ -15,16 +15,18 @@
                 <Link item active={page==="aboutme"} blue={page==="aboutme"} on:click={()=>page="aboutme"}>About Me</Link>
                 <Link item active={page==="strong_ideas"} blue={page==="strong_ideas"} on:click={()=>page="strong_ideas"}>Strong Ideas</Link>
                 <Link item active={page==="quadruple"} blue={page==="quadruple"} on:click={()=>page="quadruple"}>Quadruple Diamond</Link>
-                <Link item active={page==="code"} blue={page==="code"} on:click={()=>page="code"}>Code</Link>
+                <!-- <Link item active={page==="spatial"} blue={page==="spatial"} on:click={()=>page="spatial"}>Spatial Computing</Link>
+                <Link item active={page==="ia"} blue={page==="ia"} on:click={()=>page="ia"}>Intelligence Augmentation</Link> -->
                 <Menu right>
+                    <Link item active={page==="code"} blue={page==="code"} on:click={()=>page="code"}>Code</Link>
                     <Link item active={page==="contact"} green={page==="contact"} on:click={()=>page="contact"}>Contact</Link>
                 </Menu>
             </Menu>
         </Container>
         {#if page==="start"}
             <Container ui style="padding-top:50px;min-height:200px;padding-bottom:50px;">
-                <Header ui h2 inverted>Welcome to the homepage of 'Dr. Roy' <br><span style="font-size:14px">(he/him)</span></Header>
-                <Header ui h3 inverted>Calm Technologist and Mixed Reality Expert.</Header>
+                <Header ui h2 inverted>Welcome to the professional webpage of 'Dr. Roy' <br><span style="font-size:14px">(he/him)</span></Header>
+                <Header ui h3 inverted>Calm Technologist and Mixed Reality Expert</Header>
                 {#if page==="start"}
                     <Message ui icon compact blue>
                         <Icon ui lightbulb/>
@@ -33,7 +35,7 @@
                             <Header ui h4 style="font-style:italic">&nbsp;</Header>
                             <Header ui h4 style="font-style:italic">All that we leave behind us, are the ideas we helped grow during our lifetimes.</Header>
                             <Header ui h4 style="font-style:italic">&nbsp;</Header>
-                            <Header ui h4 style="font-style:italic">For the future of humankind, we must all learn to grow strong ideas.</Header>
+                            <Header ui h4 style="font-style:italic">For the future of humankind, we must all learn to grow strong ideas that benefit our societies and the planet.</Header>
                         </Content>
                     </Message>
                 {/if}
@@ -45,13 +47,13 @@
                     <span style="font-style:italic">Dr. Roy C. Davies</span>
                 </Column>
                 <Column twelve wide justified>
-                    I've been in and out of the academic world for three and half decades now.  My PhD work was on the Usability of Virtual Reality for brain injury rehabilitation and participatory design.  This was in the early days of VR.
+                    I've been switched between the academic and commercial worlds for three and half decades now.  My PhD work was on the Usability of Virtual Reality for brain injury rehabilitation and participatory design.  This was in the early days of VR.
                     Sometimes, students, especially those with English as a second language, call me 'Dr. Roy' rather than 'Dr. Davies'.  I kinda like it, so I don't discourage it - it's both formal and informal at the same time.
                     <br><br>
                     I've built a few companies, and together with my academic experience, I've grown a deep understanding of how to grow strong ideas for both commercial and academic purposes.  This is my key driving force - to help people to learn how to grow strong ideas.  Anybody can do it with a bit of training - something I've learned working for academyEX.
                     <br><br>
                     There are several tasks that keep me occupied.  First and foremost, there is my family, which sits above all else.  My day job is as a Senior Technician at the Smart Digital Lab in the University of Auckland, Department of Civil and Environmental Engineering.
-                    I have a few side hustles - consulting tasks that allow me to impart my knowledge and experience to others (and promote the strong ideas methodology), in particular with academyEX where I advise Masters students, and a few startups where I act as a 'Technology Friend' - helping people to understand and work with technical teams.
+                    I have a few side hustles - consulting tasks that allow me to impart my knowledge and experience to others (and promote the strong ideas methodology).  In particular I work with academyEX where I advise Masters students, and a few startups where I act as a 'Technology Friend' - helping people to understand and work with technical teams.
                     <br><br>
                  </Column>
                 <Column sixteen wide justified>
@@ -102,7 +104,7 @@
                     <span style="font-style:italic">Figure 1: The Quadruple Diamond Methodology</span>
                 </Column>
                 <Column sixteen wide justified>
-                    The quadruple diamond methodology is a way to build strong ideas primarily for commercialisation, though can also be used to support blue-skies research and longer acting ideas development.  It is based on the double diamond methodology, which is a well known and well used tool for design thinking.
+                    The quadruple diamond methodology is a way to build strong ideas primarily for commercialisation, though can also be used to support blue-skies research and longer acting ideas development.  I have based it on the double diamond methodology, which is a well known and well used tool for design thinking, and enhanced it with knowledge from the lean startup field.
                     <br><br>
                     Each diamond represents an idea expansion and an idea contraction or focus phase.  You go wide, gather as much information as you can, then you make decisions and move towards a specific solution.
                     <br><br>
@@ -124,49 +126,98 @@
         {:else if page==="code"}
             <Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
                 <Column sixteen wide>
-                    <Header ui h3 inverted>Some code projects I maintain</Header>
+                    <Header ui h3 inverted>A few of the code projects I maintain</Header>
+                    I program many computer languages, and am familiar with many libraries.  I am a multi full stack developer, and have worked on many projects included cloud platforms, web applications, virtual reality, IoT and distributed systems.  My speciality is in building technologies that solve problems for people.
+                    <br><br>
+                    In addition to computer languages, I am fascinated by human languages, and have learnt Swedish, some French and some te reo Māori, in addition to my native English.
                 </Column>
                 <Column sixteen wide justified>
-                    <Header ui h4 inverted>Open Source</Header>
-                    <Table ui inverted centered>
+                    <Table ui inverted padded>
                         <Table_Body>
                             <Table_Row>
+                                <Table_Col>
+                                    <Header ui h4 inverted>Open Source</Header>
+                                </Table_Col>
+                                <Table_Col></Table_Col>
+                                <Table_Col></Table_Col>
+                            </Table_Row>
+                            <Table_Row>
                                 <Table_Col left aligned><Link href="https://github.com/roycdaviesuoa/svelte-fomantic-ui" target="_blank">Svelte Fomantic UI</Link></Table_Col>
-                                <Table_Col>A Svelte component library for Fomantic UI</Table_Col>
-                                <Table_Col right aligned><Label ui small basic inverted>typescript</Label><Label ui small basic inverted>javascript</Label></Table_Col>
+                                <Table_Col>A Svelte component library for Fomantic UI.</Table_Col>
+                                <Table_Col right aligned>
+                                    <Labels ui tiny blue fluid centered>
+                                        <Label ui>typescript</Label>
+                                        <Label ui>javascript</Label>
+                                    </Labels>
+                                </Table_Col>
                             </Table_Row>
                             <Table_Row>
                                 <Table_Col left aligned><Link href="https://github.com/uoa-smart-digital-lab/openxr_ux_unity_base" target="_blank">OpenXR UX Unity Base</Link></Table_Col>
-                                <Table_Col>A set of UX tools for use with OpenXR in Unity to make life easier for non-programmers</Table_Col>
-                                <Table_Col right aligned><Label ui small basic inverted>c#</Label><Label ui small basic inverted>javascript</Label></Table_Col>
+                                <Table_Col>A set of UX tools for use with OpenXR in Unity to make life easier for non-programmers.</Table_Col>
+                                <Table_Col right aligned>
+                                    <Labels ui tiny blue fluid centered>
+                                        <Label ui>c#</Label>
+                                        <Label ui>javascript</Label>
+                                    </Labels>
+                                </Table_Col>
+                            </Table_Row>
+                            <Table_Row>
+                                <Table_Col left aligned><Link href="https://github.com/uoa-smart-digital-lab/openxr_ux_unity_base" target="_blank">MR Mux</Link></Table_Col>
+                                <Table_Col>An extremely lightweight multiplexor between connected Mixed and Virtual Reality devices to synchronise Virtual Environments</Table_Col>
+                                <Table_Col right aligned>
+                                    <Labels ui tiny blue fluid centered>
+                                        <Label ui>elixir</Label>
+                                    </Labels>
+                                </Table_Col>
                             </Table_Row>
                             <Table_Row>
                                 <Table_Col left aligned><Link href="https://github.com/uoa-smart-digital-lab/lab-booking-system" target="_blank">Lab Booking System</Link></Table_Col>
-                                <Table_Col>An equipment booking system for university computer labs</Table_Col>
-                                <Table_Col right aligned><Label ui small basic inverted>elixir</Label><Label ui small basic inverted>typescript</Label></Table_Col>
+                                <Table_Col>An equipment booking system for university computer labs.</Table_Col>
+                                <Table_Col right aligned>
+                                    <Labels ui tiny blue fluid centered>
+                                        <Label ui>elixir</Label>
+                                        <Label ui>typescript</Label>
+                                    </Labels>
+                                </Table_Col>
                             </Table_Row>
-                        </Table_Body>
-                    </Table>
-                    <Header ui h4 inverted>Closed Source</Header>
-                    <Table ui inverted centered>
-                        <Table_Body>
+                            <Table_Row>
+                                <Table_Col >
+                                    <Header ui h4 inverted>Closed Source</Header>
+                                </Table_Col>
+                                <Table_Col></Table_Col>
+                                <Table_Col></Table_Col>
+                            </Table_Row>
                             <Table_Row>
                                 <Table_Col left aligned><Link href="https://bitbucket.org/imersiageneral/cloud-mixed-reality-server-erlang-rel/wiki/Home" target="_blank">The Imersia Mixed Reality Server</Link></Table_Col>
-                                <Table_Col>A highly scalable and flexible game engine and mixed reality server for spatial computing</Table_Col>
-                                <Table_Col right aligned><Label ui small basic inverted>erlang</Label><Label ui small basic inverted>javascript</Label><Label ui small basic inverted>react</Label></Table_Col>
+                                <Table_Col>A highly scalable and flexible game engine and mixed reality server for spatial computing and geospatial gaming.</Table_Col>
+                                <Table_Col right aligned>
+                                    <Labels ui tiny blue fluid centered>
+                                        <Label ui>erlang</Label>
+                                        <Label ui>javascript</Label>
+                                        <Label ui>react</Label>
+                                    </Labels>
+                                </Table_Col>
                             </Table_Row>
-                        </Table_Body>
-                    </Table>
-                </Column>
-                <Column sixteen wide justified>
-                    <Header ui h4 inverted>This website</Header>
-                    <Table ui inverted centered>
-                        <Table_Body>
                             <Table_Row>
+                                <Table_Col >
+                                    <Header ui h4 inverted>This website</Header>
+                                </Table_Col>
+                                <Table_Col></Table_Col>
+                                <Table_Col></Table_Col>
+                            </Table_Row>
+                            <Table_Row>
+                                <Table_Col>
+                                    <Link href="https://roycdavies.github.io" target="_blank">roycdavies.github.io</Link>
+                                </Table_Col>
                                 <Table_Col left aligned>
                                     This website was create using Vite and Svelte, with Fomantic UI (svelte-fomantic-ui) for the UI components.
                                 </Table_Col>
-                                <Table_Col right aligned><Label ui small basic inverted>svelte</Label><Label ui small basic inverted>typescript</Label></Table_Col>
+                                <Table_Col right aligned>
+                                    <Labels ui tiny blue fluid centered>
+                                        <Label ui>svelte</Label>
+                                        <Label ui>typescript</Label>
+                                    </Labels>
+                                </Table_Col>
                             </Table_Row>
                         </Table_Body>
                     </Table>
