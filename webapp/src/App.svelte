@@ -1,7 +1,8 @@
 <script lang="ts">
-    import {Button, Menu, Container, Link, Item, Segment, Header, Table, Table_Body, Table_Col, Table_Row, Icon, Message, Content, Column, Image } from 'svelte-fomantic-ui';
+    import {Button, Menu, Container, Link, Item, Segment, Header, Table, Table_Body, Table_Col, Table_Row, Icon, Message, Content, Column, Image, List, Label } from 'svelte-fomantic-ui';
 
     import roy from "./assets/roy.jpeg"
+    import quadruplediamond from "./assets/quadruplediamond.png"
 
     let page = "start";
 </script>
@@ -9,12 +10,12 @@
 <main>
     <Segment ui inverted vertical center aligned style="min-height:1000px">
         <Container ui>
-            <Menu ui large secondary inverted pointing>
+            <Menu ui large secondary inverted pointing stackable>
                 <Link item active={page==="start"} blue={page==="start"} on:click={()=>page="start"}>Start</Link>
-                <Link item active={page==="who"} blue={page==="who"} on:click={()=>page="who"}>About Me</Link>
-                <!-- <Link item active={page==="what"} blue={page==="what"} on:click={()=>page="what"}>What</Link> -->
+                <Link item active={page==="aboutme"} blue={page==="aboutme"} on:click={()=>page="aboutme"}>About Me</Link>
                 <Link item active={page==="strong_ideas"} blue={page==="strong_ideas"} on:click={()=>page="strong_ideas"}>Strong Ideas</Link>
                 <Link item active={page==="quadruple"} blue={page==="quadruple"} on:click={()=>page="quadruple"}>Quadruple Diamond</Link>
+                <Link item active={page==="code"} blue={page==="code"} on:click={()=>page="code"}>Code</Link>
                 <Menu right>
                     <Link item active={page==="contact"} green={page==="contact"} on:click={()=>page="contact"}>Contact</Link>
                 </Menu>
@@ -37,7 +38,7 @@
                     </Message>
                 {/if}
             </Container>
-        {:else if page==="who"}
+        {:else if page==="aboutme"}
             <Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
                 <Column four wide>
                     <Image ui src={roy}/>
@@ -79,13 +80,6 @@
                     So, that's me in a few paragraphs.  The rest of this website has more detail - I hope you find it interesting and inspiring.  In case you are wondering, this site was built using svelte vite, and a library I created called svelte-fomantic-ui.
                 </Column>
             </Container>
-        {:else if page==="what"}
-            <Container ui style="padding-top:50px;min-height:200px;padding-bottom:50px;">
-                <Header ui h2 inverted>What</Header>
-            </Container>
-            <Container ui>
-
-            </Container>
         {:else if page==="strong_ideas"}
             <Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
                 <Column sixteen wide>
@@ -96,6 +90,86 @@
                  </Column>
                 <Column sixteen wide left aligned>
                     <div style="position:relative;width:100%;height:0;padding-bottom:calc(56.25% + 40px);"><iframe allowfullscreen style="position:absolute; width: 100%; height: 100%;border: solid 1px #333;" src="https://www.beautiful.ai/embed/-N_0NfqlHyRmYIUWL_-O?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Mv_W94JHHhsVB3uEVZc"></iframe><a href="https://www.beautiful.ai/embed/-N_0NfqlHyRmYIUWL_-O?utm_source=beautiful_player&utm_medium=embed&utm_campaign=-Mv_W94JHHhsVB3uEVZc">View The story of hine on Beautiful.ai</a></div>
+                </Column>
+            </Container>
+        {:else if page==="quadruple"}
+            <Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
+                <Column sixteen wide>
+                    <Header ui h3 inverted>The Quadruple Diamond Methodology</Header>
+                </Column>
+                <Column sixteen wide>
+                    <Image ui src={quadruplediamond}/>
+                    <span style="font-style:italic">Figure 1: The Quadruple Diamond Methodology</span>
+                </Column>
+                <Column sixteen wide justified>
+                    The quadruple diamond methodology is a way to build strong ideas primarily for commercialisation, though can also be used to support blue-skies research and longer acting ideas development.  It is based on the double diamond methodology, which is a well known and well used tool for design thinking.
+                    <br><br>
+                    Each diamond represents an idea expansion and an idea contraction or focus phase.  You go wide, gather as much information as you can, then you make decisions and move towards a specific solution.
+                    <br><br>
+                    The key premise is that strong ideas need to be tested, critiqued and evaluated by a wide diversity of people, and then either improved or discarded.  It is both important to recognise when an idea is not worth pursuing and of course when an idea can be progressed to become stronger.  Each inflection point of the diamonds is a decision point – to discard, reassess (hence the backward arrows), or progress.
+                    <br><br>
+                    For investors, this represents a predictable risk profile where they are encouraged to invest both in early stage (high risk) and late stage (lower risk) ideas.
+                    <Header ui h4 inverted>Strengthen</Header>
+                    Ideas typically start in someone’s head in a moment of inspiration, or after long hard work (or both).  That idea must then be strengthened through debate with others, testing, and any other processes that are typically used to try to find all the different ways the idea may fail.  This is Conjecture (the idea) and Refutation (the testing) at its finest.
+                    <Header ui h4 inverted>Innovate</Header>
+                    If the ideas survives, it enters the pool where it awaits resources (time and money) to be validated through building a Proof of Concept.  This may take any number of forms – it may be technical, or conceptual, but it must aim to test the underlying concepts of the idea in real world situations.  These may be simulated or limited situations, but it is important to get feedback from the actual stakeholders or representatives about the strength of the idea.
+                    <Header ui h4 inverted>Activate</Header>
+                    If the PoC looks promising, a more substantial development process is embarked on in order to develop a first release (if a physical product) or a fully complete, though minimal structure if the idea is more organisational in nature.  This is sometimes called a Minimum Viable Product, but with the caveat that the goal here is not to rush to market with the quickest, dirtiest solution, but rather take the time needed to ensure this will support the long-term goals and aims of the idea moving forward, with the MVP being built on and added to over time.
+                    <Header ui h4 inverted>Propogate</Header>
+                    The final phase recognises that products and services resulting from ideas don’t necessarily automatically attract customers.  “Build it and they will come” is rarely true, and in fact many ‘overnight successes’ are in fact the result of years of hard work.
+                    <br><br>
+                    We recognise this and see that reaching the intended customers with a desirable product is in itself a process of building strong ideas.  Further, propagation is not reserved for commercial products.  Scientists publish papers, go to conferences and lead research teams; artists perform their work to audiences – each is an example of reaching an intended group of stakeholders appropriate to the type of idea.
+                </Column>
+            </Container>
+        {:else if page==="code"}
+            <Container ui grid style="padding-top:50px;min-height:200px;padding-bottom:50px;">
+                <Column sixteen wide>
+                    <Header ui h3 inverted>Some code projects I maintain</Header>
+                </Column>
+                <Column sixteen wide justified>
+                    <Header ui h4 inverted>Open Source</Header>
+                    <Table ui inverted centered>
+                        <Table_Body>
+                            <Table_Row>
+                                <Table_Col left aligned><Link href="https://github.com/roycdaviesuoa/svelte-fomantic-ui" target="_blank">Svelte Fomantic UI</Link></Table_Col>
+                                <Table_Col>A Svelte component library for Fomantic UI</Table_Col>
+                                <Table_Col right aligned><Label ui small basic inverted>typescript</Label><Label ui small basic inverted>javascript</Label></Table_Col>
+                            </Table_Row>
+                            <Table_Row>
+                                <Table_Col left aligned><Link href="https://github.com/uoa-smart-digital-lab/openxr_ux_unity_base" target="_blank">OpenXR UX Unity Base</Link></Table_Col>
+                                <Table_Col>A set of UX tools for use with OpenXR in Unity to make life easier for non-programmers</Table_Col>
+                                <Table_Col right aligned><Label ui small basic inverted>c#</Label><Label ui small basic inverted>javascript</Label></Table_Col>
+                            </Table_Row>
+                            <Table_Row>
+                                <Table_Col left aligned><Link href="https://github.com/uoa-smart-digital-lab/lab-booking-system" target="_blank">Lab Booking System</Link></Table_Col>
+                                <Table_Col>An equipment booking system for university computer labs</Table_Col>
+                                <Table_Col right aligned><Label ui small basic inverted>elixir</Label><Label ui small basic inverted>typescript</Label></Table_Col>
+                            </Table_Row>
+                        </Table_Body>
+                    </Table>
+                    <Header ui h4 inverted>Closed Source</Header>
+                    <Table ui inverted centered>
+                        <Table_Body>
+                            <Table_Row>
+                                <Table_Col left aligned><Link href="https://bitbucket.org/imersiageneral/cloud-mixed-reality-server-erlang-rel/wiki/Home" target="_blank">The Imersia Mixed Reality Server</Link></Table_Col>
+                                <Table_Col>A highly scalable and flexible game engine and mixed reality server for spatial computing</Table_Col>
+                                <Table_Col right aligned><Label ui small basic inverted>erlang</Label><Label ui small basic inverted>javascript</Label><Label ui small basic inverted>react</Label></Table_Col>
+                            </Table_Row>
+                        </Table_Body>
+                    </Table>
+                </Column>
+                <Column sixteen wide justified>
+                    <Header ui h4 inverted>This website</Header>
+                    <Table ui inverted centered>
+                        <Table_Body>
+                            <Table_Row>
+                                <Table_Col left aligned>
+                                    This website was create using Vite and Svelte, with Fomantic UI (svelte-fomantic-ui) for the UI components.
+                                </Table_Col>
+                                <Table_Col right aligned><Label ui small basic inverted>svelte</Label><Label ui small basic inverted>typescript</Label></Table_Col>
+                            </Table_Row>
+                        </Table_Body>
+                    </Table>
                 </Column>
             </Container>
         {:else if page==="contact"}
