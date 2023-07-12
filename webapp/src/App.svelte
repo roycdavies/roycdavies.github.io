@@ -18,7 +18,7 @@
                 <!-- <Link item active={page==="spatial"} blue={page==="spatial"} on:click={()=>page="spatial"}>Spatial Computing</Link>
                 <Link item active={page==="ia"} blue={page==="ia"} on:click={()=>page="ia"}>Intelligence Augmentation</Link> -->
                 <Menu right>
-                    <Link item active={page==="code"} blue={page==="code"} on:click={()=>page="code"}>Code</Link>
+                    <Link item active={page==="code"} green={page==="code"} on:click={()=>page="code"}>Code</Link>
                     <Link item active={page==="contact"} green={page==="contact"} on:click={()=>page="contact"}>Contact</Link>
                 </Menu>
             </Menu>
