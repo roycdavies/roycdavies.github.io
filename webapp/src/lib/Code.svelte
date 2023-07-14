@@ -93,7 +93,7 @@
                         <Link href="https://roycdavies.github.io" target="_blank">roycdavies.github.io</Link>
                     </Table_Col>
                     <Table_Col left aligned>
-                        This website was created using Vite and Svelte, with Fomantic UI (svelte-fomantic-ui) for the UI components.
+                        This site was built using <Link href="https://vitejs.dev/guide/">vite</Link>, <Link href="https://svelte.dev/">svelte</Link>, and a library I created called <Link href="https://www.npmjs.com/package/svelte-fomantic-ui">svelte-fomantic-ui</Link>
                     </Table_Col>
                     <Table_Col right aligned>
                         <Labels ui tiny blue fluid centered>
