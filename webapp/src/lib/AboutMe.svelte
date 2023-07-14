@@ -44,6 +44,6 @@
         Universal design is often touted as a way forward, but in reality, it is impossible to design for all.  However, with care, we can design for the majority, and technology can adapt itself to meet the needs and preferences of the individual.
     </Column>
     <Column sixteen wide justified>
-        So, that's me in a few paragraphs.  The rest of this website has more detail - I hope you find it interesting and inspiring.  In case you are wondering, this site was built using svelte vite, and a library I created called svelte-fomantic-ui.
+        So, that's me in a few paragraphs.  The rest of this website has more detail - I hope you find it interesting and inspiring.  In case you are wondering, this site was built using <Link href="https://vitejs.dev/guide/">vite</Link>, <Link href="https://svelte.dev/">svelte</Link>, and a library I created called <Link href="https://www.npmjs.com/package/svelte-fomantic-ui">svelte-fomantic-ui</Link>.
     </Column>
 </Container>
