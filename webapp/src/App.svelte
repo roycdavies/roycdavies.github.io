@@ -11,6 +11,9 @@
     import Contact from "./lib/Contact.svelte";
 
     let page = "start";
+
+    const allImages = import.meta.glob('/src/assets/**/*.png', { eager: true, as: 'url' });
+
 </script>
 
 <main>
@@ -23,7 +26,7 @@
         {:else if page==="aboutme"}
             <AboutMe {page}/>
         {:else if page==="strong_ideas"}
-            <StrongIdeas {page}/>
+            <StrongIdeas {page} {allImages}/>
         {:else if page==="quadruple"}
             <QuadrupleDiamond {page}/>
         {:else if page==="code"}
